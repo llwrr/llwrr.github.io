@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>集合</title>
+</head>
+<body>
+    <script>
+        //集合：集合也可以说是容器，实际上它和数组用法有点类似
+        //集合跟数组的不同之处：
+        //1.集合中的元素是无序的。
+        //2.集合中不能出现重复的元素
+
+        //创建集合：Set
+
+        var setObj=new Set('a')
+        //添加元素 add
+        setObj.add('b')
+        setObj.add('c')
+
+        //如果集合中已经有了a了 ，那么就无法再次添加新的a，注意：是添加不上去，并且还不会报错
+        setObj.add('a')
+        //删除元素
+        setObj.delete('a')
+        //清除
+        //clear清除集合中的所有数据
+        // setObj.clear()
+
+        //遍历
+        //方案一：
+        //item:集合中包含的值
+        //index:集合中包含的键（这里没有键，所以和我们的item是同一个的）
+        // setObj.forEach(function(item,index,obj){
+        //     console.group('遍历分组')
+        //     console.log(item)
+        //     console.log(index)
+        //     console.log(obj)
+        //     console.groupEnd()
+        // })
+        //方案二: for of
+        //of 是在ES6中引入的循环来代替for..in 和 forEach，允许遍历可以迭代的数据结构 Array、String、Set等
+        for(var i of setObj){
+            console.log(i)
+        }
+
+        //判断对象中是否包含某一种元素
+        //has()
+        console.log(setObj.has('a'))
+        console.log(setObj.has('b'))
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(setObj)
+
+
+
+
+        
+
+    
+    
+    </script>
+</body>
+</html>
